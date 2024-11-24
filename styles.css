@@ -22,13 +22,10 @@ button {
   border-radius: 8px;
 }
 
-/* Botão de pausar fixo */
+/* Botão de pausar */
 #pause-button {
-  position: fixed;
-  bottom: 20px; /* Distância do fundo */
-  left: 50%; /* Centraliza horizontalmente */
-  transform: translateX(-50%); /* Ajuste fino para centralizar */
-  padding: 12px 25px;
+  margin-top: 20px;
+  padding: 15px 30px;
   font-size: 16px;
   background-color: #4CAF50;
   color: white;
@@ -39,22 +36,22 @@ button {
 }
 
 #pause-button:hover {
-  background-color: #3a9c3f; /* Cor do botão quando passar o mouse */
+  background-color: #3a9c3f;
 }
 
+/* Contêiner das cartas */
 #cards-container {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin: 20px auto;
+  flex-direction: column; /* Coloca as cartas em uma coluna */
+  align-items: center; /* Centraliza as cartas horizontalmente */
+  margin-top: 20px;
+  gap: 15px; /* Espaço entre as cartas */
 }
 
-/* Cartas */
+/* Estilos das cartas */
 .card {
-  width: 120px;
-  height: 120px;
-  margin: 10px;
+  width: 100px;
+  height: 100px;
   background-color: #fff;
   border: 3px solid #4CAF50;
   border-radius: 8px;
@@ -89,63 +86,17 @@ button {
   }
 }
 
-#feedback {
-  font-weight: bold;
-  margin-top: 20px;
-}
-
-/* Tela inicial, jogo e final */
-#start-screen, #game-screen, #end-screen {
-  display: none;
-}
-
-#start-screen {
-  display: block;
-}
-
-/* Estilos responsivos */
-@media (max-width: 768px) {
-  body {
-    padding: 10px;
-  }
-
+/* Responsividade */
+@media (max-width: 480px) {
   .card {
-    width: 100px;
-    height: 100px;
-    font-size: 24px;
+    width: 80px;
+    height: 80px;
+    font-size: 20px;
   }
 
   button {
     font-size: 14px;
     padding: 8px 16px;
-  }
-
-  #cards-container {
-    gap: 10px;
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    padding: 5px;
-  }
-
-  .card {
-    width: 90px;
-    height: 90px;
-    font-size: 20px;
-  }
-
-  button {
-    font-size: 12px;
-    padding: 6px 12px;
-  }
-
-  #cards-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-    margin: 15px auto;
   }
 
   #pause-button {

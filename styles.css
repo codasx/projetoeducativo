@@ -4,6 +4,7 @@ body {
   text-align: center;
   background-color: #f4f4f4;
   padding: 20px;
+  margin: 0;
 }
 
 h1, h2 {
@@ -18,51 +19,52 @@ button {
   background-color: #4CAF50;
   color: white;
   margin-top: 10px;
+  border-radius: 8px;
 }
 
-/* Botão de pausar fixo na parte inferior */
+/* Botão de pausar fixo */
 #pause-button {
   position: fixed;
   bottom: 20px; /* Distância do fundo */
-  left: 50%; /* Centralizar horizontalmente */
+  left: 50%; /* Centraliza horizontalmente */
   transform: translateX(-50%); /* Ajuste fino para centralizar */
-  padding: 15px 30px;
-  font-size: 18px;
-  background-color: #FF5733; /* Cor de fundo do botão */
+  padding: 12px 25px;
+  font-size: 16px;
+  background-color: #4CAF50;
   color: white;
-  border-radius: 10px;
+  border-radius: 12px;
   cursor: pointer;
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease;
 }
 
 #pause-button:hover {
-  background-color: #d44e29; /* Cor do botão quando passar o mouse */
+  background-color: #3a9c3f; /* Cor do botão quando passar o mouse */
 }
 
 #cards-container {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
   flex-wrap: wrap;
   gap: 15px;
+  margin: 20px auto;
 }
 
 /* Cartas */
 .card {
-  width: 150px;
-  height: 150px;
-  margin: 15px;
+  width: 120px;
+  height: 120px;
+  margin: 10px;
   background-color: #fff;
   border: 3px solid #4CAF50;
   border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: bold;
   cursor: pointer;
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease;
 }
 
@@ -103,41 +105,51 @@ button {
 
 /* Estilos responsivos */
 @media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
   .card {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     font-size: 24px;
   }
 
   button {
-    padding: 8px 16px;
     font-size: 14px;
+    padding: 8px 16px;
   }
 
-  h1, h2 {
-    font-size: 24px;
+  #cards-container {
+    gap: 10px;
   }
 }
 
 @media (max-width: 480px) {
+  body {
+    padding: 5px;
+  }
+
   .card {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     font-size: 20px;
   }
 
   button {
-    padding: 6px 12px;
     font-size: 12px;
-  }
-
-  h1, h2 {
-    font-size: 20px;
+    padding: 6px 12px;
   }
 
   #cards-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    gap: 8px;
+    margin: 15px auto;
+  }
+
+  #pause-button {
+    padding: 10px 20px;
+    font-size: 14px;
   }
 }

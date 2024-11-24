@@ -5,10 +5,6 @@ body {
   background-color: #f4f4f4;
   padding: 20px;
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
 }
 
 h1, h2 {
@@ -22,8 +18,8 @@ button {
   border: none;
   background-color: #4CAF50;
   color: white;
+  margin-top: 10px;
   border-radius: 8px;
-  margin-top: 20px;
 }
 
 /* Botão de pausar */
@@ -50,10 +46,9 @@ button {
   flex-wrap: wrap;
   gap: 15px;
   margin-top: 20px;
-  width: 100%;
-  max-width: 400px;
 }
 
+/* Estilos das cartas */
 .card {
   width: 150px;
   height: 150px;
@@ -111,7 +106,7 @@ button {
   }
 
   #pause-button {
-    margin-top: 20px;
-    order: 2; /* Garante que o botão sempre ficará após as cartas */
+    padding: 10px 20px;
+    font-size: 14px;
   }
 }
